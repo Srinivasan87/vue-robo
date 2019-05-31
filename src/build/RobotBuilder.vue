@@ -2,7 +2,10 @@
   <div>
     <div class="top-row">
       <div class="top part">
-        <div v-once class="robot-name">{{ selectedRobot.Head.title }}</div>
+        <div class="robot-name">
+          {{ selectedRobot.Head.title }}
+          <span v-show="selectedRobot.Head.onSale" class="sale">Sale!</span>
+        </div>
         <img v-bind:src="selectedRobot.Head.src" title="Head"/>
         <button v-on:click="selectPreviousHead()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextHead()" class="next-selector">&#9658;</button>
@@ -111,6 +114,9 @@ export default{
 </script>
 
 <style>
+.sale{
+  color: red;
+}
 .robot-name{
   position:absolute;
   top: -25px;
