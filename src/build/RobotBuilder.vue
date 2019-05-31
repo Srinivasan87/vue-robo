@@ -2,7 +2,7 @@
   <div>
     <div class="top-row">
       <div class="top part">
-        <div class="robot-name">{{ selectedRobot.Head.title }}</div>
+        <div v-once class="robot-name">{{ selectedRobot.Head.title }}</div>
         <img v-bind:src="selectedRobot.Head.src" title="Head"/>
         <button v-on:click="selectPreviousHead()" class="prev-selector">&#9668;</button>
         <button v-on:click="selectNextHead()" class="next-selector">&#9658;</button>
