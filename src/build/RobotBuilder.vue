@@ -137,7 +137,7 @@ export default{
 };
 </script>
 
-<style>
+<style scoped>
 td, th{
   text-align: left;
   padding: 5px;
