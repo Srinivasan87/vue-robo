@@ -58,6 +58,7 @@
 
 <script>
 import availableParts from '../data/parts';
+import createdHookMixin from './created-hook-mixin';
 
 function getPreviousvalidIndex (index, length){
   const deprecatedIndex = index-1;
@@ -82,6 +83,7 @@ export default{
         selectedBaseIndex: 0,
       };
     },
+    mixins: [createdHookMixin],
     computed: {
       headborderstyle(){
         return {
