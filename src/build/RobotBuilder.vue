@@ -6,15 +6,15 @@
           {{ this.selectedRobot.head }}
           <span v-show="selectedRobot.Head.onSale" class="sale">Sale!</span>
         </div> -->
-        <PartSelector :parts="availableParts.heads" position="top"/>
+        <PartSelector :parts="availableParts.heads" position="top" @partSelected="part => selectedRobot.Head=part"/>
     </div>
     <div class="middle-row">
-      <PartSelector :parts="availableParts.arms" position="left"/>
-      <PartSelector :parts="availableParts.torsos" position="center"/>
-      <PartSelector :parts="availableParts.arms" position="right"/>
+      <PartSelector :parts="availableParts.arms" position="left"  @partSelected="part => selectedRobot.LeftArm=part"/>
+      <PartSelector :parts="availableParts.torsos" position="center"  @partSelected="part => selectedRobot.Torso=part"/>
+      <PartSelector :parts="availableParts.arms" position="right"  @partSelected="part => selectedRobot.RightArm=part"/>
     </div>
     <div class="bottom-row">
-      <PartSelector :parts="availableParts.bases" position="bottom"/>
+      <PartSelector :parts="availableParts.bases" position="bottom"  @partSelected="part => selectedRobot.Base=part"/>
     </div>
     <div>
       <h1>Cart</h1>
