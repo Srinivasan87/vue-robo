@@ -1,6 +1,24 @@
 <template>
   <div class="content">
-    <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
+
+    <div class="preview">
+      <div class="preview-content">
+        <div class="top-row">
+          <img :src="selectedRobot.Head.src"/>
+        </div>
+        <div class="middle-row">
+          <img :src="selectedRobot.LeftArm.src" class="rotate-left"/>
+          <img :src="selectedRobot.Torso.src"/>
+          <img :src="selectedRobot.RightArm.src" class="rotate-right"/>
+        </div>
+        <div class="bottom-row">
+          <img :src="selectedRobot.Base.src"/>
+        </div>
+      </div>
+          <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
+
+    </div>
+
     <div class="top-row">
         <!-- <div class="robot-name">
           {{ this.selectedRobot.head }}
@@ -89,8 +107,8 @@ td, th{
 
 .add-to-cart{
   position:absolute;
-  right:30px;
-  width:220px;
+  right:5px;
+  width:210px;
   padding:3px;
   font-size: 16px;
 }
@@ -193,5 +211,26 @@ position: relative;
 }
 .right .next-selector {
   right: -3px;
+}
+.preview {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 210px;
+  height: 210px;
+  padding: 5px;
+}
+.preview-content {
+  border: 1px solid #999;
+}
+.preview img {
+  width: 50px;
+  height: 50px;
+}
+.rotate-right {
+  transform: rotate(90deg);
+}
+.rotate-left {
+  transform: rotate(-90deg);
 }
 </style>
