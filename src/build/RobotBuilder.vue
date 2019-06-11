@@ -2,19 +2,23 @@
   <div class="content">
 
     <div class="preview">
-      <div class="preview-content">
-        <div class="top-row">
-          <img :src="selectedRobot.Head.src"/>
-        </div>
-        <div class="middle-row">
-          <img :src="selectedRobot.LeftArm.src" class="rotate-left"/>
-          <img :src="selectedRobot.Torso.src"/>
-          <img :src="selectedRobot.RightArm.src" class="rotate-right"/>
-        </div>
-        <div class="bottom-row">
-          <img :src="selectedRobot.Base.src"/>
-        </div>
-      </div>
+      <CollapsibleSection></CollapsibleSection>
+        <CollapsibleSection>
+          <div class="preview-content">
+            <div class="top-row">
+              <img :src="selectedRobot.Head.src"/>
+            </div>
+            <div class="middle-row">
+              <img :src="selectedRobot.LeftArm.src" class="rotate-left"/>
+              <img :src="selectedRobot.Torso.src"/>
+              <img :src="selectedRobot.RightArm.src" class="rotate-right"/>
+            </div>
+        
+            <div class="bottom-row">
+              <img :src="selectedRobot.Base.src"/>
+            </div>
+          </div>
+         </CollapsibleSection>
           <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
 
     </div>
@@ -58,11 +62,11 @@
 import availableParts from '../data/parts';
 import createdHookMixin from './created-hook-mixin';
 import PartSelector from './PartSelector';
-
+import CollapsibleSection from '../shared/CollapsibleSection';
 
 export default{
     name:'RobotBuilder',
-    components: { PartSelector },
+    components: { PartSelector,CollapsibleSection },
     data(){
       return {
         cart: [],
