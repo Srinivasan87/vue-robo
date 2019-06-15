@@ -6,7 +6,7 @@
 
 <script>
 export default{
-    name: 'SidebarBuild',
+    name: 'Build', 
 };
 </script>
 

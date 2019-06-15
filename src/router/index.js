@@ -18,17 +18,17 @@ export default new Router({
     routes: [{
         path: '/',
         name: 'Home',
-        component: {
+        components: {
             default: HomePage,
             sidebar: SidebarStandard,
-        },
+          },
     },{
         path: '/build',
         name: 'Build',
-        component: {
+        components: {
             default: RobotBuilder,
             sidebar: SidebarBuild,
-        },
+          },
     },
     {
         path: '/parts/browse',

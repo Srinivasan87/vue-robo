@@ -10,7 +10,7 @@
             </router-link>
           </li>
            <li class="nav-item">
-            <router-link class="nav-link" :to="{name: 'Build'}" exact>
+            <router-link class="nav-link" :to="{name: 'Build'}" >
             Build
             </router-link>
           </li>
@@ -18,7 +18,7 @@
       </nav>
     </header>
     <div class="container">
-      <aside class="aside">
+      <aside class="aside"> 
            <router-view name="sidebar"/>
       </aside>
     <main>
