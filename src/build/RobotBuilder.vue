@@ -104,7 +104,7 @@ export default{
       addToCart(){
         const robot = this.selectedRobot;
         const cost = robot.Head.cost + robot.LeftArm.cost + robot.Torso.cost + robot.RightArm.cost + robot.Base.cost;
-        this.cart.push(Object.assign({},robot,{cost}));
+        this.$store.commit('addRobotToCart',Object.assign({},robot,{cost}));
         this.addedToCart = true;
       }
     }
