@@ -38,23 +38,6 @@
     <div class="bottom-row">
       <PartSelector :parts="availableParts.bases" position="bottom"  @partSelected="part => selectedRobot.Base=part"/>
     </div>
-    <div>
-      <h1>Cart</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Robot</th>
-            <th class="cost">Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(robot,index) in cart" :key="index">
-            <td>{{robot.Head.title}}</td>
-            <td class="cost">{{robot.cost}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
 </template>
 
